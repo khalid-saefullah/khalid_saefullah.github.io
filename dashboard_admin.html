@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Penjualan Lukisan</title>
+    <link rel="stylesheet" href="css/dashboard_admin.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li onclick="navigate('dashboard')">Dashboard</li>
+            <li onclick="navigate('sales')">Penjualan</li>
+            <li onclick="navigate('inventory')">Stok Lukisan</li>
+            <li onclick="navigate('reports')">Laporan</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Selamat Datang, Admin</h1>
+        </header>
+
+        <section id="dashboard">
+            <h2>Statistik Penjualan</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Total Penjualan</h3>
+                    <p id="total-sales">Rp 0</p>
+                </div>
+                <div class="card">
+                    <h3>Jumlah Lukisan Terjual</h3>
+                    <p id="paintings-sold">0</p>
+                </div>
+            </div>
+        </section>
+        <form action="contact.html" method="get">
+            <button type="submit" class="button">kembali ke beranda
+            </button>
+        <section id="sales" class="hidden">
+            <h2>Penjualan Terbaru</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Lukisan</th>
+                        <th>Harga</th>
+                        <th>Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody id="sales-table">
+                    <!-- Data penjualan akan dimasukkan melalui JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="inventory" class="hidden">
+            <h2>Stok Lukisan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Lukisan</th>
+                        <th>Stok</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-table">
+                    <!-- Data stok akan dimasukkan melalui JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reports" class="hidden">
+            <h2>Laporan</h2>
+            <p>Fitur laporan sedang dalam pengembangan.</p>
+        </section>
+    </div>
+
+    <script src="js/dashboard_admin.js"></script>
+</body>
+</html>
